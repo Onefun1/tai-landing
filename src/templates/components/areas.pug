@@ -1,0 +1,90 @@
+mixin item(prod)
+    li.item
+        .item__top
+            .item__type
+                span.item__name!=prod.type
+                img(src=prod.icon, alt=prod.type)
+            img(src=prod.img, alt="product")
+        .item__bottom
+            p.item__text.text-red.text-bold Ставка:&nbsp;
+                span!=prod.rate
+            p.item__text.text-red.text-bold Апрув:&nbsp;
+                span!=prod.approve
+-
+    const itemsArray = [
+        {
+            type: "Похудение",
+            icon: "img/areas__item1.png",
+            img: "img/areas__box.png",
+            rate: "22",
+            approve: "22"
+        },
+        {
+            type: "Паразиты",
+            icon: "img/areas__item2.png",
+            img: "img/areas__box.png",
+            rate: "22",
+            approve: "22"
+        },
+        {
+            type: "Отбеливание зубов",
+            icon: "img/areas__item3.png",
+            img: "img/areas__box.png",
+            rate: "22",
+            approve: "22"
+        },
+        {
+            type: "Папиломы",
+            icon: "img/areas__item4.png",
+            img: "img/areas__box.png",
+            rate: "22",
+            approve: "22"
+        },
+        {
+            type: "Потенция",
+            icon: "img/areas__item5.png",
+            img: "img/areas__box.png",
+            rate: "22",
+            approve: "22"
+        },
+        {
+            type: "Красота",
+            icon: "img/areas__item6.png",
+            img: "img/areas__box.png",
+            rate: "22",
+            approve: "22"
+        },
+        {
+            type: "Диабет",
+            icon: "img/areas__item7.png",
+            img: "img/areas__box.png",
+            rate: "22",
+            approve: "22"
+        },
+        {
+            type: "Гипертония",
+            icon: "img/areas__item8.png",
+            img: "img/areas__box.png",
+            rate: "22",
+            approve: "22"
+        },
+        {
+            type: "Увеличитель груди",
+            icon: "img/areas__item9.png",
+            img: "img/areas__cream.png",
+            rate: "22",
+            approve: "22"
+        },
+        {
+            type: "Отбеливание кожи",
+            icon: "img/areas__item10.png",
+            img: "img/areas__box2.png",
+            rate: "22",
+            approve: "22"
+        }
+    ];
+section.areas.block
+  .areas__container.container
+        ul.areas__list
+            each prod in itemsArray
+                +item(prod)
