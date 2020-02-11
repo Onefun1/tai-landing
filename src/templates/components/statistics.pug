@@ -1,11 +1,60 @@
+mixin cart(item)
+    li.shop__item.shop
+        a.shop__item-link
+            .shop__item-img
+                img(src=item.icon, alt=item.type)
+            .shop__item-category!=item.type
+            h4.shop__item-title!=item.title     
+            .shop__item-desc!=item.desc
+            .shop__item-bottom
+                .shop__item-points
+                    .shop__item-points-number!=item.points
+                    .shop__item-points-curr QUID
+                button.shop__btn.btn_hover Хочу накопить
+-
+    const itemsList = [
+        {
+            icon: 'img/statistics__goPro.jpg',
+            type: 'Другое',
+            title: 'Аквабокс для GoPro',
+            desc: 'Для GoPro Hero 5/6/7 Black Puluz',
+            points: '2290'
+        },
+        {
+            icon: 'img/statistics__iphone.png',
+            type: 'Эксклюзив',
+            title: 'Чехол на iPhone',
+            desc: 'Чехол на iPhone RocketProfit',
+            points: '990'
+        },
+        {
+            icon: 'img/statistics__clock.png',
+            type: 'Часы',
+            title: 'Amazfit Stratos 2s ',
+            desc: 'Часы Amazfit Stratos 2s Premium Edition',
+            points: '16490'
+        },
+        {
+            icon: 'img/statistics__homepod.png',
+            type: 'Колонки и акустика',
+            title: 'Apple HomePod',
+            desc: 'Акустическая система Apple HomePod',
+            points: '24990'
+        }
+    ]                    
+
+
 section.statistics.block
   .statistics__container.container
     .statistics__robot-img
-        img(src="img/statistics__robot-img.png", alt="robot")
-    .statistics__calc-img
-        img(src="img/statistics__calc-img.png", alt="robot")
-        img(src="img/statistics__arrow.png", alt="robot")
-
+        img.statistics__robot-pic(src="img/statistics__robot-img.png", alt="robot")
+    .statistics__recomend
+        span.statistics__calc-text Введи данные в
+            br
+            | поля
+        .statistics__calc-circle    
+            img.statistics__calc-pic(src="img/statistics__calc-img.png", alt="calc")
+        img.statistics__arrow-pic(src="img/statistics__arrow.png", alt="arrow")
     h2.statistics__title.title сколько бонусных QUID 
         br
         | я заработаю С ROCKETPROFIT
@@ -24,3 +73,10 @@ section.statistics.block
             .item__info 102 600 QUID
     button.statistics__btn.btn Расчитать
     span.statistics__help * Система статусов RocketProfit помогает увеличить заработок.
+    .statistics__goods-container
+        ul.shop__list
+            each item in itemsList
+                +cart(item)
+    button.statistics__btn.btn Получить связку
+        br
+        | на лучших условиях!           

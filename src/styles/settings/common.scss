@@ -112,9 +112,14 @@ button {
 
 .btn {
     background-color: #da2626;
-    border-radius: 28px;
+    border-radius: 45px;
     padding: 10px 27px;
     color: #fff;
     font-size: 18px;
     line-height: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+    &:hover {
+        background-color: #9e1b1b;
+    }
 }

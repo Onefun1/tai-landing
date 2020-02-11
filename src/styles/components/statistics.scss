@@ -1,9 +1,52 @@
 .statistics {
+    &__container {
+        position: relative;
+    }
     &__robot-img {
+        position: absolute;
+        right: 0;
+        top: 100px;
         width: 343px;
         height: 343px;
         border-radius: 50%;
         background-color: red;
+    }
+    &__robot-img img {
+        position: relative;
+        top: -30px;
+        left: auto;
+        margin: 0 auto;
+    }
+    &__recomend {
+        position: absolute;
+        top: 83px;
+    }
+    &__calc-circle {
+        background-color: red;
+        border-radius: 50%;
+        width: 171px;
+        height: 171px;
+    }
+    &__calc-pic {
+        position: relative;
+        top: 17px;
+        right: -23px;
+    }
+    &__arrow-pic {
+        position: relative;
+        top: -230px;
+        left: 171px;
+    }
+    &__calc-text {
+        position: relative;
+        top: 0;
+        left: -105px;
+        font-size: 36px;
+        line-height: 48px;
+        text-align: center;
+        color: #12284b;
+        display: inline-block;
+        transform: rotate(-17deg);
     }
     &__title {
         position: relative;
@@ -28,6 +71,9 @@
         // justify-content: center;
         align-items: center;
     }
+    &__list .item:not(:last-child) {
+        margin-bottom: 10px;
+    }
     &__item {
         text-align: center;
     }
@@ -41,9 +87,8 @@
     .item__info {
         font-size: 18px;
         line-height: 30px;
-        margin-bottom: 10px;
         background-color: #e3edf3;
-        min-width: 380px;
+        min-width: 430px;
     }
     &__help {
         display: block;
@@ -59,6 +104,113 @@
         min-width: 320px;
         font-size: 18px;
         line-height: 31px;
-        margin: 20px auto;
+        margin: 30px auto;
+    }
+    &__goods-container {
+        padding-top: 30px;
+    }
+    .shop {
+        &__list {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-wrap: wrap;
+            border-top: 1px solid #e6e6e6;
+        }
+        &__item {
+            position: relative;
+            z-index: 2;
+            width: 25%;
+            padding: 30px;
+            border: 1px solid transparent;
+            border-bottom: 1px solid #e6e6e6;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &__item:not(:nth-child(4n)) {
+            border-right: 1px solid #e6e6e6;
+        }
+        &__item-img {
+            width: 167px;
+            height: 167px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &__item-img {
+            margin: 0 auto;
+        }
+        &__item-category {
+            display: inline-block;
+            font-weight: 600;
+            padding: 6px 9px 6px 10px;
+            margin-bottom: 23px;
+            font-size: 10px;
+            line-height: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #08b1c4;
+            background: #E3F6F8;
+            border-radius: 50px;
+            align-self: center;
+        }
+        &__item-title {
+            margin-bottom: 4px;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 29px;
+            text-align: center;
+            color: #23395e;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &__item-desc {
+            max-width: 213px;
+            height: 44px;
+            overflow: hidden;
+            margin: 0 auto 24px;
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+            color: #8892A1;
+        }
+        &__item-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+        &__item-points {
+            text-align: left;
+        }
+        &__item-points-number {
+            font-size: 20px;
+            line-height: normal;
+            color: #23395e;
+        }
+        &__item-points-curr {
+            font-size: 12px;
+            line-height: 19px;
+            color: #8892A1;
+        }
+        &__btn {
+            font-family: "MuseoSansMedium", sans-serif;
+            outline: none;
+            background-color: #08b1c4;
+            border: none;
+            font-size: 15px;
+            padding: 11px 27px;
+            cursor: pointer;
+            transition: all 0.4s ease-out;
+            color: #fff;
+            border-radius: 25px;
+            &:hover {
+                background-color: #088AA7;
+            }
+        }
     }
 }
