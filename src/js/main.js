@@ -1,10 +1,10 @@
 import './helpers/postDate';
 import scrollSmooth from './helpers/smooth-scroll.js';
-import example from './modules/example.js';
+import youtubeShowVideo from './modules/youtube';
 
-function main () {
-  scrollSmooth();
-  example();
+function main() {
+    scrollSmooth();
+    youtubeShowVideo();
 }
 
 main();

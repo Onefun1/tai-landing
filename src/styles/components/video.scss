@@ -1,0 +1,106 @@
+.video {
+    background-color: #e3edf3;
+    z-index: 1;
+    &__title {
+        position: relative;
+        // font-size: 36px;
+        line-height: 48px;
+        color: #23395e;
+        z-index: 1;
+    }
+    &__title::before {
+        position: absolute;
+        content: "";
+        top: 25px;
+        left: calc(50% - 300px);
+        width: 600px;
+        height: 16px;
+        background: #ffffff;
+        z-index: -1;
+    }
+    &__review-text {
+        margin-top: 60px;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #23395e;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    &__youtube,
+    iframe {
+        position: relative;
+        width: 857px;
+        height: 482px;
+        margin: 0 auto;
+        box-shadow: 0 0 5px #ccc;
+    }
+    iframe {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .thumb {
+        height: 100%;
+        width: 100%;
+    }
+    .play {
+        position: absolute;
+        top: calc(50% - 50px);
+        left: calc(50% - 42px);
+        width: 84px;
+        height: 84px;
+        border-radius: 50%;
+        background-color: #db2121;
+    }
+    .play::after {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateX(-30%) translateY(-50%);
+        transform: translateX(-30%) translateY(-50%);
+        border-style: solid;
+        border-width: 16.5px 0 16.5px 25px;
+        border-color: transparent transparent transparent #fff;
+    }
+    &__img {
+        position: absolute;
+        background-color: #fff;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        img {
+            display: block;
+            margin: 30px auto;
+        }
+    }
+    &__buttons {
+        position: relative;
+        margin: 50px auto;
+        max-width: 250px;
+    }
+    &__registration-btn {
+        background-color: #fff;
+        text-transform: uppercase;
+        font-size: 18px;
+        line-height: 30px;
+        padding-left: 100px;
+        padding: 10px 30px 10px 100px;
+        border-radius: 50px;
+        transition: all .4s;
+        cursor: pointer;
+        &:hover {
+            background-color: darken(#e3edf3, 10%);
+        }
+    }
+    &__singin-btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 88px;
+        height: 100%;
+        border-radius: 50px;
+    }
+}

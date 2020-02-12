@@ -1,0 +1,106 @@
+.footer {
+    color: #ffffff;
+    padding-top: 50px;
+    overflow: hidden;
+    background: repeat url(../img/promo__stars-bg.png);
+    background-color: #172f56;
+    &__container {
+        position: relative;
+    }
+    .container {
+        &__pic {
+            position: absolute;
+        }
+        &__pic-palm-leaves1 {
+            top: 126px;
+            left: -58px;
+            transform: rotate(102deg);
+        }
+        &__pic-palm-leaves2 {
+            top: 92px;
+            right: 112px;
+            transform: rotate(148deg);
+        }
+        &__pic-palm-leaves3 {
+            top: 47px;
+            right: -68px;
+            transform: rotate(180deg);
+        }
+        &__pic-leafs {
+            top: 214px;
+            left: 144px;
+        }
+    }
+    &__elephant {
+        position: absolute;
+        top: 17%;
+        left: -124px;
+    }
+    &__btn {
+        margin: 25px auto 69px;
+        border: solid 4px #ffffff;
+        background-color: transparent;
+        width: 420px;
+        font-size: 27px;
+        font-weight: bold;
+        line-height: 29px;
+        &:hover {
+            border-color: #ccc;
+        }
+    }
+    &__contacts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contacts {
+        padding-bottom: 51px;
+        &__mesenger {
+            padding-right: 80px;
+        }
+        &__item {
+            font-size: 15px;
+            line-height: 30px;
+            padding-left: 30px;
+            position: relative;
+            // &-skype::before {
+            //     position: absolute;
+            //     content: "";
+            //     left: 0;
+            //     top: 50%;
+            //     transform: translateY(-50%);
+            //     width: 20px;
+            //     height: 20px;
+            //     border: 1px solid red;
+            //     background: no-repeat url(..img/footer__skype.png);
+            // }
+            // &-mail::before {
+            //     position: absolute;
+            //     content: "";
+            //     left: 0;
+            //     top: 50%;
+            //     transform: translateY(-50%);
+            //     width: 20px;
+            //     height: 20px;
+            //     border: 1px solid red;
+            //     background: url(..img/footer__mail.png) no-repeat;
+            // }
+            &-skype {
+                background: url(..img/footer__skype.png) no-repeat left;
+            }
+        }
+        &__sosial {
+            line-height: 30px;
+            img {
+                display: inline-block !important;
+                margin-right: 15px;
+            }
+        }
+    }
+    &__rights {
+        font-size: 11px;
+        line-height: 30px;
+        display: block;
+        text-align: center;
+    }
+}
