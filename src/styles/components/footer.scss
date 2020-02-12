@@ -1,9 +1,11 @@
 .footer {
+    position: relative;
     color: #ffffff;
     padding-top: 50px;
     overflow: hidden;
     background: repeat url(../img/promo__stars-bg.png);
     background-color: #172f56;
+    z-index: 1;
     &__container {
         position: relative;
     }
@@ -20,6 +22,7 @@
             top: 92px;
             right: 112px;
             transform: rotate(148deg);
+            z-index: -1;
         }
         &__pic-palm-leaves3 {
             top: 47px;
@@ -57,43 +60,40 @@
         padding-bottom: 51px;
         &__mesenger {
             padding-right: 80px;
+            a {
+                position: relative;
+                text-decoration: none;
+                color: #fff;
+                display: block;
+            }
+            img {
+                display: inline-block;
+                position: relative;
+                top: 4px;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
         }
         &__item {
             font-size: 15px;
             line-height: 30px;
-            padding-left: 30px;
+            padding-left: 10px;
             position: relative;
-            // &-skype::before {
-            //     position: absolute;
-            //     content: "";
-            //     left: 0;
-            //     top: 50%;
-            //     transform: translateY(-50%);
-            //     width: 20px;
-            //     height: 20px;
-            //     border: 1px solid red;
-            //     background: no-repeat url(..img/footer__skype.png);
-            // }
-            // &-mail::before {
-            //     position: absolute;
-            //     content: "";
-            //     left: 0;
-            //     top: 50%;
-            //     transform: translateY(-50%);
-            //     width: 20px;
-            //     height: 20px;
-            //     border: 1px solid red;
-            //     background: url(..img/footer__mail.png) no-repeat;
-            // }
-            &-skype {
-                background: url(..img/footer__skype.png) no-repeat left;
-            }
+            // display: block;
+        }
+        &__item2 {
+            display: block;
         }
         &__sosial {
             line-height: 30px;
+            transition: all .4s;
             img {
                 display: inline-block !important;
                 margin-right: 15px;
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
         }
     }

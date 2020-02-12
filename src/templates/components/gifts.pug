@@ -1,0 +1,78 @@
+include mixin_card
+-
+    const giftsList = [
+        {
+            icon: 'img/statistics__goPro.jpg',
+            type: 'Другое',
+            title: 'Аквабокс для GoPro',
+            desc: 'Для GoPro Hero 5/6/7 Black Puluz',
+            points: '2290'
+        },
+        {
+            icon: 'img/statistics__iphone.png',
+            type: 'Эксклюзив',
+            title: 'Чехол на iPhone',
+            desc: 'Чехол на iPhone RocketProfit',
+            points: '990'
+        },
+        {
+            icon: 'img/statistics__clock.png',
+            type: 'Часы',
+            title: 'Amazfit Stratos 2s ',
+            desc: 'Часы Amazfit Stratos 2s Premium Edition',
+            points: '16490'
+        },
+        {
+            icon: 'img/statistics__homepod.png',
+            type: 'Колонки и акустика',
+            title: 'Apple HomePod',
+            desc: 'Акустическая система Apple HomePod',
+            points: '24990'
+        },
+        {
+            icon: 'img/statistics__goPro.jpg',
+            type: 'Другое',
+            title: 'Аквабокс для GoPro',
+            desc: 'Для GoPro Hero 5/6/7 Black Puluz',
+            points: '2290'
+        },
+        {
+            icon: 'img/statistics__iphone.png',
+            type: 'Эксклюзив',
+            title: 'Чехол на iPhone',
+            desc: 'Чехол на iPhone RocketProfit',
+            points: '990'
+        },
+        {
+            icon: 'img/statistics__clock.png',
+            type: 'Часы',
+            title: 'Amazfit Stratos 2s ',
+            desc: 'Часы Amazfit Stratos 2s Premium Edition',
+            points: '16490'
+        },
+        {
+            icon: 'img/statistics__homepod.png',
+            type: 'Колонки и акустика',
+            title: 'Apple HomePod',
+            desc: 'Акустическая система Apple HomePod',
+            points: '24990'
+        }
+    ]
+
+
+
+section.gifts.block
+  .gifts__container.container#score
+    .gifts__head.head
+        p.head-text.head-text-top.text-bold С 1 по 29 
+            span.date-0.datestyle(data-format="month yyyy") февраля 2020
+            |  года
+        p.head-text-main.title мы дарим х2  QUID за  лиды на Таиланд!
+        p.head-text.text-bold Забирай крутые подарки из магазина РокетПрофит
+    .gifts__main
+        ul.shop__list
+            each item in giftsList
+                +cart(item)
+    .gifts__btn.btn В магазин
+
+    

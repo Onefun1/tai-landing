@@ -1,19 +1,27 @@
 header.header
     .header__container.container
+        .header__burger.burger
+            span.burger__line.burger__line-first
+            span.burger__line.burger__line-second
+            span.burger__line.burger__line-third
         .header__logo
             img(src="img/header__logo.png", alt="Logo")
-        nav.header__nav
+        nav.header__nav.header__info
+            .header__button-wrapper
+                .header__buttons
+                    button.header__singin-btn.btn Вход
+                    button.header__registration-btn Регистрация
             ul.header__list
                 li.header__item.item 
-                    a(href="") преимущества  
+                    a(href="#advantages") преимущества  
                 li.header__item.item 
-                    a(href="") офферы
+                    a(href="#offers") офферы
                 li.header__item.item 
-                    a(href="") бонусы
+                    a(href="#bonuses") бонусы
                 li.header__item.item 
-                    a(href="") магазин
+                    a(href="#score") магазин
                 li.header__item.item 
-                    a(href="") отзывы
-        .header__buttons
+                    a(href="#reviews") отзывы  
+        .header__buttons.header-main__btn
             button.header__singin-btn.btn Вход
             button.header__registration-btn Регистрация

@@ -1,54 +1,164 @@
-.header {
-    &__container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-    &__nav {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    &__list {
-        display: flex;
-        text-transform: uppercase;
-        font-size: 18px;
-        line-height: 30px;
-        color: #0e2341;
-    }
-    &__item:not(:last-child) {
-        margin-right: 30px;
-    }
-    &__item a {
-        text-decoration: none;
-        color: inherit;
-    }
-    &__buttons {
-        position: relative;
-    }
-    &__registration-btn {
-        background-color: #e3edf3;
-        text-transform: uppercase;
-        font-size: 18px;
-        line-height: 30px;
-        padding-left: 100px;
-        padding: 10px 30px 10px 100px;
-        border-radius: 50px;
-        transition: all .4s;
-        cursor: pointer;
-        &:hover {
-            background-color: darken(#e3edf3, 10%);
-        }
-    }
-    &__singin-btn {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 88px;
-        height: 100%;
-        border-radius: 50px;
-    }
-}
+                .header {
+                    &__container {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                    }
+                    &__burger {
+                        display: none;
+                    }
+                    &__nav {
+                        flex: 1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    &__list {
+                        display: flex;
+                        text-transform: uppercase;
+                        font-size: 18px;
+                        line-height: 30px;
+                        color: #0e2341;
+                    }
+                    &__item:not(:last-child) {
+                        margin-right: 30px;
+                    }
+                    &__item a {
+                        text-decoration: none;
+                        color: inherit;
+                    }
+                    &__buttons {
+                        position: relative;
+                    }
+                    &__registration-btn {
+                        background-color: #e3edf3;
+                        text-transform: uppercase;
+                        font-size: 18px;
+                        line-height: 30px;
+                        padding-left: 100px;
+                        padding: 10px 30px 10px 100px;
+                        border-radius: 50px;
+                        transition: all .4s;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: darken(#e3edf3, 10%);
+                        }
+                    }
+                    &__singin-btn {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 88px;
+                        height: 100%;
+                        border-radius: 50px;
+                    }
+                    &__button-wrapper {
+                        display: none;
+                    }
+                }
+                /* BURGER*/
+                
+                .header__burger {
+                    width: 40px;
+                    height: 28px;
+                    position: relative;
+                    display: none;
+                    cursor: pointer;
+                    transition: all .5s linear;
+                    &:hover {
+                        transform: translateY(2px);
+                    }
+                }
+                
+                .burger__line {
+                    display: block;
+                    width: 100%;
+                    height: 4px;
+                    border-radius: 2px;
+                    position: absolute;
+                    background-color: #304670;
+                    transition: all .4s linear
+                }
+                
+                .burger__line-third {
+                    background-color: #22abbe;
+                }
+                
+                .header__burger:hover .burger__line {
+                    background-color: #304670;
+                }
+                
+                .header__nav-close:hover {
+                    transform: rotate(90deg)
+                }
+                
+                .burger__line-first {
+                    top: 0
+                }
+                
+                .burger__line-second {
+                    top: 50%;
+                    transform: translateY(-50%)
+                }
+                
+                .burger__line-third {
+                    bottom: 0
+                }
+                /*BURGER ends*/
+                
+                @include r(767) {
+                    .header {
+                        &__burger {
+                            display: block;
+                        }
+                        &__info {
+                            position: fixed;
+                            width: 359px;
+                            height: 426px;
+                            top: 83px;
+                            left: 0;
+                            background-color: #fff;
+                            z-index: 100;
+                            padding: 20px;
+                            transition: all .3s linear;
+                            transform: translateX(-100%);
+                            &-active {
+                                transform: translateX(0%);
+                                box-shadow: 0 0 5px #ccc;
+                            }
+                        }
+                        &__list {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            margin-top: 120px;
+                            width: 100%;
+                            padding-left: 35px;
+                        }
+                        &__item:not(:last-child) {
+                            margin-bottom: 20px;
+                        }
+                        .header__info-close {
+                            width: 40px;
+                            height: 40px;
+                            position: absolute;
+                            top: 11px;
+                            right: 20px;
+                            z-index: 5;
+                            -webkit-transition: all .2s linear;
+                            transition: all .2s linear;
+                        }
+                        &-main__btn {
+                            display: none;
+                        }
+                        &__button-wrapper {
+                            display: block;
+                            position: absolute;
+                            top: 50px;
+                            left: 50%;
+                            transform: translate(-50%);
+                        }
+                    }
+                }

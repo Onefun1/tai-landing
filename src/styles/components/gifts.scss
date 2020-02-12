@@ -1,0 +1,58 @@
+.gifts {
+    background-color: #e3edf3;
+    position: relative;
+    padding-top: 90px;
+    z-index: 1;
+    &::before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 40px 35.5px 0 35.5px;
+        border-color: #ffffff transparent transparent transparent;
+        top: 0;
+        left: 50%;
+    }
+    .head {
+        padding-bottom: 80px;
+    }
+    .head-text {
+        font-size: 25px;
+        line-height: 33px;
+        color: #12284b;
+        text-align: center;
+        &-top {
+            margin-bottom: 27px;
+        }
+    }
+    .head-text-main {
+        position: relative;
+        color: #ffffff;
+        font-weight: bold;
+        z-index: 1;
+    }
+    .head-text-main::before {
+        position: absolute;
+        content: '';
+        width: 856px;
+        height: 64px;
+        top: -13px;
+        left: 50%;
+        transform: translateX(-50%) rotate(-2deg);
+        background-color: #da2626;
+        z-index: -1;
+    }
+    .datestyle {
+        text-transform: lowercase;
+    }
+    &__main {
+        background-color: #fff;
+        box-shadow: 0 0 5px #ccc;
+    }
+    &__btn {
+        max-width: 320px;
+        margin: 57px auto 0;
+        text-align: center;
+    }
+}

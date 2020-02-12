@@ -1,16 +1,4 @@
-mixin cart(item)
-    li.shop__item.shop
-        a.shop__item-link
-            .shop__item-img
-                img(src=item.icon, alt=item.type)
-            .shop__item-category!=item.type
-            h4.shop__item-title!=item.title     
-            .shop__item-desc!=item.desc
-            .shop__item-bottom
-                .shop__item-points
-                    .shop__item-points-number!=item.points
-                    .shop__item-points-curr QUID
-                button.shop__btn.btn_hover Хочу накопить
+include mixin_card
 -
     const itemsList = [
         {
@@ -45,7 +33,7 @@ mixin cart(item)
 
 
 section.statistics.block
-  .statistics__container.container
+  .statistics__container.container#bonuses
     .statistics__robot-img
         img.statistics__robot-pic(src="img/statistics__robot-img.png", alt="robot")
     .statistics__recomend
