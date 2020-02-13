@@ -28,24 +28,29 @@
         top: 250px;
         right: -304px;
     }
+    &__palm-container {
+        position: relative;
+        left: -49px;
+        top: -209px;
+    }
     .container__pic {
         position: absolute;
         &-palm-leaves1 {
             top: -133px;
             left: 246px;
             transform: rotate(22deg);
-            z-index: 1;
+            z-index: 0;
         }
         &-palm-leaves2 {
             top: -68px;
             left: 277px;
-            z-index: 1;
+            z-index: 0;
         }
         &-palm-leaves3 {
             top: -139px;
             left: 450px;
             transform: rotate(-15deg);
-            z-index: 1;
+            z-index: 0;
         }
     }
     &__block {
@@ -69,9 +74,10 @@
         width: 910px;
         height: 47px;
         background-color: #da2626;
-        transform: rotate(-1deg);
+        left: 50%;
+        top: 5px;
+        transform: translate(-50%) rotate(-1deg);
         z-index: -1;
-        left: calc(50% - 455px);
     }
     &__content {
         position: absolute;
@@ -149,6 +155,186 @@
             &-bird {
                 top: -126px;
                 right: 0;
+            }
+        }
+    }
+}
+
+@include r(1219) {
+    .promo {
+        &__palm-container {
+            left: -225px;
+            top: -196px;
+        }
+        &__content {
+            left: 84px;
+        }
+        &__container::after {
+            display: none;
+        }
+    }
+}
+
+@include r(1023) {
+    .promo {
+        min-height: 600px;
+        &__mark {
+            font-size: 44px;
+        }
+        &__mark:after {
+            width: 764px;
+            top: -1px;
+        }
+        .title {
+            line-height: 48px;
+        }
+        .custom-text {
+            font-size: 32px;
+        }
+        &__palm-container {
+            left: -356px;
+            top: -238px;
+        }
+        &__content {
+            top: 214px;
+            left: -30px;
+            padding-top: 77px;
+        }
+        .content {
+            &__pic-arrow {
+                top: -133px;
+                right: 236px;
+            }
+            &__pic-bird {
+                top: -111px;
+                right: 472px;
+                width: 135px;
+            }
+            &__pic-robot {
+                width: 220px;
+                top: 25px;
+                left: -11px;
+            }
+            &__pic-big-leaves1 {
+                top: -51px;
+                left: -113px;
+            }
+            &__pic-big-leaves2 {
+                top: 147px;
+                left: -357px;
+            }
+        }
+    }
+}
+
+@include r(767) {
+    .promo {
+        padding-top: 67px !important;
+        &__mark {
+            font-size: inherit;
+        }
+        &__mark:after {
+            width: 576px;
+            top: -11px;
+        }
+        .title {
+            line-height: 36px;
+        }
+        .custom-text {
+            font-size: 25px;
+        }
+        &__content {
+            top: 214px;
+            left: 19px;
+            width: 700px;
+            height: 600px;
+            padding-top: 77px;
+        }
+        &__text {
+            font-size: 26px;
+            line-height: 33px;
+        }
+        &__btn {
+            max-width: 220px;
+            font-size: 20px;
+            line-height: 21px;
+        }
+        .content {
+            &__pic-arrow {
+                top: -154px;
+                right: 95px;
+            }
+            &__pic-leafs {
+                top: -15px;
+                right: 175px;
+                width: 100px;
+            }
+            &__pic-branch {
+                top: -45px;
+                right: -120px;
+            }
+            &__pic-bird {
+                top: -111px;
+                right: 289px;
+                width: 135px;
+            }
+            &__pic-big-leaves2,
+            &__pic-big-leaves3,
+            &__pic-leafs {
+                display: none;
+            }
+        }
+    }
+}
+
+@include r(639) {
+    .promo {
+        min-height: 630px;
+        &__mark:after {
+            width: 330px;
+            height: 84px;
+        }
+        &__content {
+            top: 290px;
+            left: calc(50% - 300px);
+            width: 600px;
+        }
+        .container {
+            &__pic-palm-leaves1,
+            &__pic-palm-leaves2 {
+                display: none;
+            }
+            &__pic-palm-leaves3 {
+                top: -68px;
+                left: 309px;
+            }
+        }
+        .content {
+            &__pic-arrow {
+                display: none;
+            }
+            &__pic-big-leaves1 {
+                width: 149px;
+                top: -49px;
+                left: 108px;
+                transform: rotate(1deg);
+            }
+            &__pic-branch {
+                top: -51px;
+                right: 102px;
+                width: 144px;
+                transform: rotate(-38deg);
+            }
+            &__pic-bird {
+                top: -136px;
+                right: 152px;
+                width: 86px;
+            }
+            &__pic-robot {
+                width: 109px;
+                left: calc(50% - 57px);
+                top: -143px;
+                z-index: -1;
             }
         }
     }

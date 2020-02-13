@@ -108,6 +108,44 @@
                 }
                 /*BURGER ends*/
                 
+                @include r(1219) {
+                    .header {
+                        &__list,
+                        &__registration-btn,
+                        .btn {
+                            font-size: 16px;
+                        }
+                        &__item:not(:last-child) {
+                            margin-right: 15px;
+                        }
+                    }
+                }
+                
+                @include r(1023) {
+                    .header {
+                        &__logo {
+                            max-width: 150px;
+                        }
+                        &__list,
+                        &__registration-btn,
+                        .btn {
+                            font-size: 12px;
+                        }
+                        .btn {
+                            padding: 5px 27px;
+                            line-height: 21px;
+                            width: 78px;
+                        }
+                        &__registration-btn {
+                            line-height: 23px;
+                            padding: 5px 30px 5px 86px;
+                        }
+                        &__item:not(:last-child) {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                
                 @include r(767) {
                     .header {
                         &__burger {
@@ -117,7 +155,7 @@
                             position: fixed;
                             width: 359px;
                             height: 426px;
-                            top: 83px;
+                            top: 72px;
                             left: 0;
                             background-color: #fff;
                             z-index: 100;
@@ -159,6 +197,20 @@
                             top: 50px;
                             left: 50%;
                             transform: translate(-50%);
+                        }
+                        &__list,
+                        &__registration-btn,
+                        .btn {
+                            font-size: 18px;
+                        }
+                        .btn {
+                            padding: inherit;
+                            line-height: inherit;
+                            width: 88px;
+                        }
+                        &__registration-btn {
+                            line-height: 30px;
+                            padding: 10px 30px 10px 100px;
                         }
                     }
                 }
