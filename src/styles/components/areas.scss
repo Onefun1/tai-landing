@@ -53,3 +53,14 @@
         }
     }
 }
+
+@include r(1340) {
+    .areas {
+        &__container {
+            width: inherit;
+        }
+        .item {
+            margin-right: 10px;
+        }
+    }
+}

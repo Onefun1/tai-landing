@@ -11,7 +11,7 @@
         border-style: solid;
         border-width: 50px 45.5px 0;
         border-color: #ffffff transparent transparent transparent;
-        top: 0;
+        top: -1px;
         left: 50%;
         transform: translate(-50%);
     }
@@ -83,5 +83,103 @@
         margin: 57px auto 0;
         text-align: center;
         line-height: 52px;
+    }
+}
+
+@include r(1450) {
+    .gifts {
+        &__pic-big-leaves1 {
+            width: 21%;
+            right: -15px;
+        }
+        &__pic-branch {
+            left: -65px;
+            width: 21%;
+        }
+    }
+}
+
+@include r(1219) {
+    .gifts {
+        &__pic-big-leaves1 {
+            right: -15px;
+            top: -110px;
+        }
+        &__pic-branch {
+            top: -131px;
+            left: -65px;
+        }
+        &__pic-arrow {
+            top: 154px;
+        }
+    }
+}
+
+@include r(1023) {
+    .gifts {
+        &__pic-big-leaves1 {
+            right: 1px;
+            top: -66px;
+        }
+        &__pic-branch {
+            top: -90px;
+            left: -25px;
+        }
+        &__pic-arrow {
+            display: none;
+        }
+        &__pic-bird {
+            top: -23px;
+        }
+        .head-text-main::before {
+            height: 91px;
+            width: 560px;
+        }
+    }
+}
+
+@include r(767) {
+    .gifts {
+        &::before {
+            border-width: 27px 25.5px 0;
+        }
+        &__pic-big-leaves1 {
+            display: none;
+        }
+        &__pic-branch {
+            display: none;
+        }
+        &__pic-bird {
+            left: 29px;
+        }
+        .head {
+            padding-bottom: 30px;
+        }
+        .head-text-main::before {
+            width: 452px;
+        }
+    }
+}
+
+@include r(480) {
+    .gifts {
+        .head-text-main::before {
+            width: 353px;
+            height: 72px;
+        }
+        &__btn {
+            max-width: 290px;
+        }
+        &__pic-bird {
+            display: none;
+        }
+    }
+}
+
+@include r(360) {
+    .gifts {
+        .head-text-main::before {
+            width: 290px;
+        }
     }
 }

@@ -2,6 +2,9 @@
     background-color: #e3edf3;
     position: relative;
     z-index: 1;
+    .break-row {
+        display: none;
+    }
     &__title {
         text-align: center;
         text-transform: uppercase;
@@ -14,6 +17,7 @@
         align-items: center;
     }
     .item {
+        flex: 1;
         &__head {
             position: relative;
             width: 180px;
@@ -53,5 +57,27 @@
     }
     &__btn {
         margin: 15px auto;
+    }
+}
+
+@include r(1023) {
+    .benefits {
+        &__item {
+            min-height: 285px;
+        }
+        .break-row {
+            display: block;
+        }
+    }
+}
+
+@include r(767) {
+    .benefits {
+        &__list {
+            flex-direction: column;
+        }
+        &__item {
+            margin-bottom: 20px;
+        }
     }
 }
