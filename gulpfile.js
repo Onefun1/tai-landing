@@ -18,8 +18,8 @@ const deploy = series(clean, prod, parallel(markup, style, script, image, svg, f
 const development = series(clean, dev, parallel(markup, style, script, image, svg, font, localization), serve);
 
 module.exports = {
-  default: development,
-  build,
-  deploy,
-  create
+    default: development,
+    build,
+    deploy,
+    create
 }

@@ -10,7 +10,6 @@
         position: relative;
         z-index: 1;
     }
-    &__container::after,
     &__container::before {
         position: absolute;
         content: '';
@@ -18,11 +17,6 @@
         height: 415px;
         background-color: #152c51;
         border-radius: 50%;
-    }
-    &__container::after {
-        top: -213px;
-        left: -251px;
-        z-index: -11;
     }
     &__container::before {
         z-index: -3;
@@ -33,6 +27,16 @@
         position: relative;
         left: -49px;
         top: -209px;
+        .promo__circle {
+            position: absolute;
+            width: 415px;
+            height: 415px;
+            background-color: #152c51;
+            border-radius: 50%;
+            z-index: -3;
+            top: -127px;
+            left: 180px;
+        }
     }
     .container__pic {
         position: absolute;
@@ -178,6 +182,9 @@
 
 @include r(1023) {
     .promo {
+        &__circle {
+            display: none;
+        }
         min-height: 600px;
         &__mark {
             font-size: 44px;
@@ -239,7 +246,7 @@
             top: -11px;
         }
         .title {
-            line-height: 36px;
+            line-height: 40px;
         }
         .custom-text {
             font-size: 25px;
@@ -252,7 +259,7 @@
             padding-top: 77px;
         }
         &__text {
-            font-size: 26px;
+            font-size: 23px;
             line-height: 33px;
         }
         &__btn {
@@ -292,8 +299,8 @@
     .promo {
         min-height: 630px;
         &__mark:after {
-            width: 330px;
-            height: 84px;
+            width: 471px;
+            height: 47px;
         }
         &__content {
             top: 290px;
@@ -337,6 +344,15 @@
                 top: -143px;
                 z-index: -1;
             }
+        }
+    }
+}
+
+@include r(479) {
+    .promo {
+        &__mark:after {
+            width: 415px;
+            height: 91px;
         }
     }
 }

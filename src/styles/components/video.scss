@@ -148,4 +148,11 @@
     .video__title::before {
         display: none;
     }
+    .video__title {
+        font-size: 20px;
+    }
+    .video__review-text {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
 }

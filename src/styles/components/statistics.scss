@@ -352,3 +352,11 @@
             }
         }
     }
+    
+    @include r(364) {
+        .statistics {
+            &__recomend {
+                top: 100px;
+            }
+        }
+    }

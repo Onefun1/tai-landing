@@ -52,11 +52,12 @@ function main() {
 
 
     $('.statistics__slider').slick({
-        dots: true,
+        dots: false,
         infinite: false,
         speed: 300,
         slidesToShow: 4,
         slidesToScroll: 4,
+        arrows: false,
         responsive: [{
                 breakpoint: 1024,
                 settings: {
